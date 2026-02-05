@@ -46,14 +46,12 @@ def main():
         original_content = question['Content']
         sanitized_content = sanitize_content(original_content)
         title = generate_title(sanitized_content)
-        reactions = question.get('Reactions', 'N/A')
         
         print(f"\n{'─' * 80}")
         print(f"Discussion #{i}")
         print(f"{'─' * 80}")
         print(f"Title:     {title}")
         print(f"Category:  Session Questions")
-        print(f"Reactions: {reactions}")
         print(f"\nBody:")
         print(sanitized_content)
         

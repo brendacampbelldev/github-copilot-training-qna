@@ -40,15 +40,14 @@ python import_discussions.py
 Place your CSV at `data/Q&A ReportClean.csv`:
 
 ```csv
-Source,Type,Content,Reactions
-ATTENDEE,QUESTION,"Your question here",5
+Source,Type,Content
+ATTENDEE,QUESTION,"Your question here"
 ```
 
 **Required columns:**
 - `Source`: Must be "ATTENDEE" for questions to be imported
 - `Type`: Must be "QUESTION" for questions to be imported
 - `Content`: The question text (will be sanitized)
-- `Reactions`: Number of reactions (informational only)
 
 ## Privacy Rules Applied
 

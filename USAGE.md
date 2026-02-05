@@ -53,7 +53,6 @@ The `import_discussions.py` script reads a CSV file containing Q&A data from tra
    - `Source`: Who created the entry (e.g., ATTENDEE, MODERATOR, SPEAKER)
    - `Type`: Type of entry (e.g., QUESTION, ANSWER, COMMENT)
    - `Content`: The actual question or comment text
-   - `Reactions`: Number of reactions (optional)
 
 3. The CSV should already be "cleaned" - no Identity column with personal info
 
@@ -107,11 +106,11 @@ python import_discussions.py
 Example CSV file:
 
 ```csv
-Source,Type,Content,Reactions
-ATTENDEE,QUESTION,"How do I install GitHub Copilot in VS Code?",5
-MODERATOR,ANSWER,"You can install it from the Extensions marketplace.",2
-ATTENDEE,QUESTION,"What are the pricing options?",3
-ATTENDEE,COMMENT,"Great session, thank you!",10
+Source,Type,Content
+ATTENDEE,QUESTION,"How do I install GitHub Copilot in VS Code?"
+MODERATOR,ANSWER,"You can install it from the Extensions marketplace."
+ATTENDEE,QUESTION,"What are the pricing options?"
+ATTENDEE,COMMENT,"Great session, thank you!"
 ```
 
 ## Privacy & Redaction Rules

@@ -187,7 +187,7 @@ def read_csv_file(filepath: str) -> List[Dict[str, str]]:
         reader = csv.DictReader(f)
         
         # Validate required columns
-        required_columns = {'Source', 'Type', 'Content', 'Reactions'}
+        required_columns = {'Source', 'Type', 'Content'}
         if not required_columns.issubset(set(reader.fieldnames or [])):
             raise ValueError(f"CSV must contain columns: {required_columns}")
         
