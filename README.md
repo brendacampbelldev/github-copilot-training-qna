@@ -12,6 +12,16 @@ FAQ and automated discussion importer for GitHub Copilot training sessions.
 
 See [USAGE.md](USAGE.md) for detailed setup and usage instructions.
 
+### Preview Mode (No GitHub Token Required)
+
+Run the demo script to see what discussions would be created:
+
+```bash
+python demo.py
+```
+
+### Full Import
+
 ```bash
 # Install dependencies
 pip install -r requirements.txt
@@ -27,3 +37,4 @@ python import_discussions.py
 
 - [USAGE.md](USAGE.md) - Comprehensive usage guide
 - [import_discussions.py](import_discussions.py) - Main import script
+- [demo.py](demo.py) - Preview what discussions would be created (no token required)

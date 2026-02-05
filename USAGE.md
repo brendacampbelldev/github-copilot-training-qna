@@ -68,6 +68,14 @@ Before running the import:
 
 ### Run the Import
 
+First, preview what will be created (no token required):
+
+```bash
+python demo.py
+```
+
+Then run the actual import:
+
 ```bash
 python import_discussions.py
 ```
