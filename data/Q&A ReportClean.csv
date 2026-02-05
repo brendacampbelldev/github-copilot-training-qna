@@ -1,8 +1,42 @@
-Source,Type,Content,Reactions
-ATTENDEE,QUESTION,"How do I install GitHub Copilot in VS Code?",5
-MODERATOR,ANSWER,"You can install it from the Extensions marketplace.",2
-ATTENDEE,QUESTION,"What are the pricing options for GitHub Copilot? Please contact me at john.doe@example.com for more details. Thanks, John Smith",3
-ATTENDEE,QUESTION,"Can GitHub Copilot work with Python and JavaScript?",8
-ATTENDEE,COMMENT,"Great session, thank you!",10
-ATTENDEE,QUESTION,"How does Copilot handle sensitive data? Regards, Jane Developer",4
-SPEAKER,QUESTION,"Any questions about the enterprise features?",0
+Source,Type,Content
+ATTENDEE,QUESTION,"Can it be integrated with Azure DevOps?"
+ATTENDEE,QUESTION,"Will you share the slides?"
+ATTENDEE,QUESTION,"At our company we have the need for the following feature:
+
+The GitHub Copilot Chat and Agents do not only pick up AGENTS.md or other related files for prompts and instructions but can also let the user choose a remote git repository, such as a private GitHub repo, where agent MD files are stored centrally.
+
+When our agent specialists update the centralised repo for MD files, it is automatically picked up by all agents across the company without the user noticing. All colleagues will be able to use the newest instructions and policies.
+
+Does that work already? Or will that be perhaps on your roadmap? If not, how can we request this feature?"
+ATTENDEE,QUESTION,"Is it possible to let the agent load AGENTS.md and other instruction and prompt library files from a central and remote git repository?"
+ATTENDEE,QUESTION,"Is PowerShell 6+ required to use GitHub Copilot CLI?"
+ATTENDEE,QUESTION,"Is it ensured that --yolo only does things within the existing repo, or might it be possible to affect files or config outside the repository?"
+ATTENDEE,QUESTION,"Can we get the links to the repo please?"
+ATTENDEE,QUESTION,"Is PowerShell 6+ required for GitHub Copilot CLI?"
+ATTENDEE,QUESTION,"How can I configure GitHub Copilot to work more autonomously, asking fewer questions like ""should I continue?"" and making educated guesses about available options?"
+ATTENDEE,QUESTION,"Will this presentation be available for future viewing?"
+ATTENDEE,QUESTION,"Are there any advantages of using the GitHub Copilot CLI compared to using agent mode in VS Code?"
+ATTENDEE,QUESTION,"I see that the session is recorded. Where can we get those recorded sessions?"
+ATTENDEE,QUESTION,"Are there any plans to add features from GitHub.com to Azure DevOps (other than using GitHub Copilot through the CLI or IDE with codebases stored in Azure DevOps Repos)?"
+ATTENDEE,QUESTION,"Does GitHub Copilot work with GitHub Enterprise Server (GHES), or only with GitHub.com?"
+ATTENDEE,QUESTION,"Would you recommend using Copilot CLI rather than the Visual Studio Copilot integration?"
+ATTENDEE,QUESTION,"If we leave a review comment on the PR created by the agent, will the agent recognise the comment and update the code accordingly?"
+ATTENDEE,QUESTION,"Is token caching implemented for similar requests, and does it benefit usage quotas for applicable models?"
+ATTENDEE,QUESTION,"It seems the generated output was not reviewed and accepted as-is. This may work for demo projects, but for enterprise projects every file must be read and approved."
+ATTENDEE,QUESTION,"What is the difference between using Sonnet 4.5 in GitHub Copilot and in Claude Code?"
+ATTENDEE,QUESTION,"Does Copilot work with GHES?"
+ATTENDEE,QUESTION,"Which GitHub Copilot features are available on GitHub Enterprise Server (on-prem) versus GitHub Enterprise Cloud?"
+ATTENDEE,QUESTION,"How would I ask the agent questions about two repositories so it can take both codebases into account at the same time?"
+ATTENDEE,QUESTION,"How can I see the recording later as I missed this call?"
+ATTENDEE,QUESTION,"Do we currently have image processing capabilities where an image can be used as input and a response returned?"
+ATTENDEE,QUESTION,"Are there differences in these flows or how agents behave between different licenses, such as Business versus Enterprise?"
+ATTENDEE,QUESTION,"When choosing models, I can select Auto mode in VS Code but not in the browser. Is this missing or does it need to be enabled?"
+ATTENDEE,QUESTION,"What is the link to the awesome agents?"
+ATTENDEE,QUESTION,"Can you recommend a strategy for taking custom prompts, instructions, and agent files from a central organisation repository and replicating them across other repositories?"
+ATTENDEE,QUESTION,"Are custom agents working the same way in VS Code and Visual Studio?"
+ATTENDEE,QUESTION,"For GitHub Copilot used in coding activities, what licensing model applies, and what tools or metrics are available to track usage quotas at the user and organisation levels?"
+ATTENDEE,QUESTION,"How does a user know how many premium requests they have remaining?"
+ATTENDEE,QUESTION,"How does changing the model mid-chat affect the context understanding of the previous conversation?"
+ATTENDEE,QUESTION,"How are we restricting sensitive data? Are there guardrails on input before requests are sent to external models? This is asked as I understand requests do not go through the GSB gateway."
+ATTENDEE,QUESTION,"When used within the GitHub web frontend, which model is used?"
+ATTENDEE,QUESTION,"Can anyone share the link for registering for the next sessions? Thanks."
