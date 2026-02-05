@@ -27,6 +27,8 @@ REPO_NAME = os.environ.get("GITHUB_REPOSITORY_NAME", "github-copilot-training-qn
 DISCUSSION_CATEGORY = "Session Questions"
 TITLE_PREFIX = "Q&A: "
 TITLE_MAX_LENGTH = 60  # Maximum chars from content to use in title
+# Ensures truncated titles are at least this fraction of target length when breaking at word boundary
+TITLE_WORD_BOUNDARY_THRESHOLD = 0.7
 
 
 def redact_emails(text: str) -> str:
@@ -104,12 +106,17 @@ def remove_signature_lines(text: str) -> str:
     # Handle inline signatures at the end of text
     # Pattern: [.!?] [Thanks|Regards|Best|Cheers|Sincerely][, ].*$
     # This removes everything from the signature keyword to the end
-    inline_signature_pattern = r'[\.\!\?]?\s+(thanks|thank you|regards|best regards|best|cheers|sincerely)[\s,]+.*$'
-    result = re.sub(inline_signature_pattern, '.', result, flags=re.IGNORECASE)
+    inline_signature_pattern = r'[.!?]?\s+(thanks|thank you|regards|best regards|best|cheers|sincerely)[\s,]+.*$'
+    result = re.sub(inline_signature_pattern, '', result, flags=re.IGNORECASE)
     
-    # Also handle signatures preceded by punctuation like ", Thanks, Name"
+    # Also handle signatures preceded by comma like ", Thanks, Name"
     inline_signature_pattern2 = r',\s+(thanks|thank you|regards|best regards|best|cheers|sincerely)[\s,]+.*$'
-    result = re.sub(inline_signature_pattern2, '.', result, flags=re.IGNORECASE)
+    result = re.sub(inline_signature_pattern2, '', result, flags=re.IGNORECASE)
+    
+    # Clean up by ensuring proper sentence ending
+    result = result.rstrip()
+    if result and not result[-1] in '.!?':
+        result += '.'
     
     return result.strip()
 
@@ -151,7 +158,7 @@ def generate_title(content: str, max_length: int = TITLE_MAX_LENGTH) -> str:
     if len(content) > max_length:
         # Try to cut at last word boundary
         last_space = title_content.rfind(' ')
-        if last_space > max_length * 0.7:  # Only use word boundary if it's not too short
+        if last_space > max_length * TITLE_WORD_BOUNDARY_THRESHOLD:
             title_content = title_content[:last_space]
         title_content += "..."
     
