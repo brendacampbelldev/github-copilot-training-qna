@@ -1,0 +1,8 @@
+Source,Type,Content,Reactions
+ATTENDEE,QUESTION,"How do I install GitHub Copilot in VS Code?",5
+MODERATOR,ANSWER,"You can install it from the Extensions marketplace.",2
+ATTENDEE,QUESTION,"What are the pricing options for GitHub Copilot? Please contact me at john.doe@example.com for more details. Thanks, John Smith",3
+ATTENDEE,QUESTION,"Can GitHub Copilot work with Python and JavaScript?",8
+ATTENDEE,COMMENT,"Great session, thank you!",10
+ATTENDEE,QUESTION,"How does Copilot handle sensitive data? Regards, Jane Developer",4
+SPEAKER,QUESTION,"Any questions about the enterprise features?",0
